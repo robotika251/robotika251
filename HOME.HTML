@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טיפוח גני בנימינה</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eef7ee;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .header {
+            background: linear-gradient(135deg, #4CAF50, #388E3C);
+            color: white;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #2e7d32;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+        .hero {
+            background: url('garden.jpg') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .volunteer-btn {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .volunteer-btn:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .contact-form, .about-section {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+        }
+        form input, form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        form button:hover {
+            background-color: #388E3C;
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <header class="header">טיפוח גני בנימינה</header>
+    <nav class="nav">
+        <a href="#gallery">גלריה</a>
+        <a href="#about">אודות</a>
+        <a href="#contact">צור קשר</a>
+    </nav>
+    
+    <section class="hero">
+        <h1>שומרים על הגנים שלנו יפים ומטופחים</h1>
+        
+        <button class="volunteer-btn" onclick="openVolunteerForm()">להתנדבות</button>
+    </section>
+    <section id="about" class="about-section">
+        <h2>אודות</h2>
+        <p>טיפוח גני בנימינה הוא פרויקט ייחודי לשימור והעצמת אזורי הגינון בבנימינה, עם דגש על שיתוף קהילתי והיסטורי.</p>
+    </section>
+    
+    
+    <section id="gallery" class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ8c-hdRMlGx3un2VM9-OIBPmev_ItPXy2kQ&s" alt="גן בבנימינה">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThRrWV0uZ6biiBoGjbymqPp-EzDjd39Xs89g&s" alt="גן נוסף">
+        <img src="https://makom.hamoreshet.org.il/wp-content/uploads/2024/05/%D7%91%D7%99%D7%A0%D7%99%D7%9E%D7%99%D7%A0%D7%94.png" alt="פארק מקומי">
+        <img src="1.jpg" alt="פארק מקומי">
+        <img src="2.jpg" alt="פארק מקומי">
+        <img src="3.jpg" alt="פארק מקומי">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3_IOTHZA8jSjt7-UcckcgfP9GHrpj8us0ag&s" alt="פארק מקומי">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPJ82GYPdR7hTqCkP66ar2jl5cmLwGZ6yEpQ&s" alt="פארק מקומי">
+
+    </section>
+    
+    <section class="container">
+        <h1>אמת המים הבלתי גמורה בבנימינה – גבעת עדה</h1>
+        <p>אמת המים הבלתי גמורה בבנימינה – גבעת עדה: עדות להנדסה רומית מתקדמת
+אמת המים הבלתי גמורה, הנמצאת באזור נחל תנינים, היא אחד מהאתרים המרתקים והמיוחדים ביותר בהנדסה רומית באזור. מערכת המים נחשפה לראשונה בשנת 1950 על ידי ד"ר המבורגר, רופא המושבה וארכיאולוג חובב, ומהווה עדות לרמה הגבוהה של המיומנות הרומית בתכנון תשתיות.
+ההיסטוריה של אמת המים אמת המים נועדה להוביל מים ממרחקים כדי לשרת את האוכלוסייה באזור קיסריה. הרומאים ניסו לשנות את תוואי האמה כדי להימנע ממעבר דרך ביצות הכבארה, ובכך להבטיח את זרימת המים באופן רציף לעיר קיסריה, שהייתה אחת הערים המרכזיות בתקופה הרומית.
+אורך האמה כ-200 מטרים. התוואי לא הושלם, ולפי הערכות, ייתכן שעקב קשיים טכניים או כלכליים לא הצליחו הרומאים להשלימה, ומאז נשארה לא גמורה.
+המצב כיום היום, אמת המים הבלתי גמורה בבנימינה מהווה אתר ארכיאולוגי מעניין, שבו ניתן להתרשם מההנדסה הרומית. האמה, הבנוייה מאבן, כוללת שיפוע מחוכם וארכיטקטורה מרשימה, שיכולה להמחיש את השאיפה של הרומאים לניצול מקסימלי של משאבי המים.
+החשיבות ההיסטורית של האתר האתר מהווה עדות לא רק להישג ההנדסי של הרומאים, אלא גם לחשיבות הרבה שהייתה לתשתיות מים בעידן הרומי. השאיפה לשלוט בזרימת המים ולמנוע בעיות של הצפות או חוסרים הייתה אבן יסוד בתכנון ערים מתקדם, במיוחד בערים גדולות כמו קיסריה.
+הפוטנציאל התיירותי והחינוכי האתר נמצא בסמוך לאתרים תיירותיים נוספים באזור, ויש בו פוטנציאל לפיתוח תיירותי ולחינוך הציבור בנושא ההיסטוריה וההנדסה הרומית. פיתוח מסלול סיור ומידע נוסף על האתר עשוי להעשיר את חוויית המבקרים ולחבר אותם להיסטוריה המרתקת של המקום.
+.</p>
+    </section>
+    
+    <section class="container">
+        <h1>פנינה תנינה</h1>
+        <p>פינת חמד שנבנתה ע"י תלמידי אמירים לפני 8 שנים.
+בשיעורי סביבה יחד עם המחנכות ואבא מתנדב הם חיפשו מקום שיהיה מעין פינה בה אפשר לנוח בזמן סיור, ללמוד בשטח על הצמחים בשדה הבור, ולהינות מהנוף.
+היום זוהי פינה לרווחת התושבים אפשר לנוח טיולי רגליים ולאופניים .
+היא בנוייה כספסל בין העצים , פינת צל. בנוייה מצמיגים ישנים שעליהם יצקו בטון ובסוף צבעו בצבעים שונים. לאחר שנים הצבע קצת התקלף והאזור זקוק לטיפוח והחזקה שוטפת. חשוב גם לשדרג את המקום ואולי להוסיף ספסל נוסף שיספיק לכיתה שלמה.
+חשוב לטפח ולתחזק על מנת שיהיה נעים לשעות ולנוח 
+ואפילו לעצור לארוחה קלה ולהנות מהנוף
+</p>
+    </section>
+    
+    <section class="container">
+        <h1>הבאר האנטילית</h1>
+        <p>הבאר האנטילית
+הבאר האנטילית היא באר משוחזרת מתקופת השלטון העות'מאני, הכוללת מנגנון שאיבה פעיל ובריכת אגירה מוגבהת מאבן. האתר ממוקם ליד גן חוות זרעוניה והחאן ההיסטורי, ומהווה מוקד עניין לחובבי היסטוריה, חקלאות ומורשת מקומית.
+בכניסה לאתר ניצבים שני גלגלי ברזל גדולים, המחוברים למנגנון השאיבה העתיק של הבאר, אשר שוכנת בתוך מבנה אבן מסורג. בעבר שימשה הבאר להשקיית שדות דרך מערכת תעלות, באמצעות אנטילים – כלי קיבול שאספו מים מהבאר והעבירו אותם לבריכת האגירה הצמודה.
+בתחילת המאה ה-20 שימשה הבאר גם לצרכים ביתיים של מתיישבי חאן זרעוניה. עם רכישת האזור על ידי יק"א, נערך במקום שיפוץ משמעותי: הותקן מנוע דיזל, ונפרסה מערכת צינורות מתכת שהובילה מים לחווה החקלאית הניסיונית שפעלה בסביבה.
+בשנות ה-30 של המאה ה-20, לאחר פירוק החווה, רכש האגרונום ד"ר גוסטב רייך את השטח, כולל הבאר והפרדס הצמוד לה. כאשר הבאר התייבשה בעקבות קידוחים נוספים באזור, הוזרמו מים לבריכה מבארות סמוכות, ומשם הועברו לתעלות ההשקיה.
+כיום, לאחר שחזור שנעשה בשיתוף מועצת בנימינה, המועצה לשימור אתרים ותרומת משפחת מוזס, משמשת הבאר האנטילית כאתר תיירות, מחקר ופעילויות חינוכיות, ומספרת את סיפור ההתיישבות והחקלאות באזור.
+.</p>
+    </section>
+    
+    <section class="container">
+        <h1>תחנת הקמח</h1>
+        <p>
+מיקום:תחנת הקמח
+טחנת הקמח אבו נור, הנמצאת בסמוך לנחל תנינים בין בנימינה לבית חנניה, היא טחנה עות'מאנית שהוקמה במאה ה-19.האתר נמצא בסמוך לשביל ישראל, מה שמאפשר למטיילים לבקר בו במהלך מסלולי הליכה באזור.
+
+דברים שקרו במשך הזמן:
+הטחנה כללה ארבעה מתקני טחינה שהופעלו באמצעות מים שהוזרמו אליהם ממערכת המים של קיסריה. במהלך השנים, הטחנה עברה מספר בעלויות ושיפוצים, וב-1915 עברה לידי יק"א, אך פסקה לפעול עד 1922. לאחר מכן, היא ננטשה ונהרסה.
+
+שרידים של הטחנה:
+כיום, ניתן למצוא במקום שרידים של הטחנה, כולל אבני ריחיים ומתקני טחינה, המהווים עדות להיסטוריה העשירה של האזור.
+
+הקמתה של הטחנה:
+הוקמה בסוף המאה ה-19, כאשר משפחת אבו נור הקימה את התחנה כדי לספק קמח טרי לאזור שמסביב. התחנה פעלה בעיקר לסחיטת חיטה ושעורה, ובמקביל, משפחת אבו נור פתחה עסק קטן של טחנות קמח. בשנים לאחר מכן, התחנה הפכה לאחד המרכזים החשובים באזור, ובמיוחד באזור הצפון של הארץ, כשהיא תרמה לאספקת קמח באיכות גבוהה.
+
+
+
+                                                             
+.</p>
+    </section>
+    
+    <section id="map">
+        <h2>מפה</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.205843434118!2d34.94525647669621!3d32.516326499944245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d40b2dddb5fd1%3A0x8c6d8db7b5b6b28a!2z15HXmdeT16jXnNeV16jXlSDXoNeo15HXmdeQINeV16DXldeZ15PXpA!5e0!3m2!1siw!2sil!4v1707926408183!5m2!1siw!2sil" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    
+
+    <section id="contact" class="contact-form">
+        <h2>צור קשר</h2>
+        <form>
+            <input type="text" placeholder="שם מלא" required>
+            <input type="email" placeholder="אימייל" required>
+            <textarea placeholder="הודעה" rows="4" required></textarea>
+            <button type="submit">שלח</button>
+        </form>
+    </section>
+
+    
+
+    <div id="processModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeProcessModal()">&times;</span>
+            <h2>תהליך העבודה</h2>
+            <p>בפרויקט טיפוח גני בנימינה עברנו תהליך מחקרי וטכנולוגי שכלל מספר שלבים חשובים:</p>
+            <ul class="process-list">
+                <li><strong>חקר האתרים:</strong> למידת ההיסטוריה והמאפיינים של הגנים בבנימינה.</li>
+                <li><strong>סיעור מוחין:</strong> כיצד להציג את המידע באופן ויזואלי וידידותי למשתמש.</li>
+                <li><strong>פיתוח האתר:</strong> בשל העניין הרב בטכנולוגיה, הוחלט על פיתוח אתר אינטראקטיבי.</li>
+                <li><strong>שימוש בבינה מלאכותית:</strong> קבלת מידע, הצעות ושיחה עם מודלי AI לתכנון האתר.</li>
+                <li><strong>הדרכה טכנולוגית:</strong> למידת עקרונות בניית אתרים והטמעתם בעיצוב האתר.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        function openProcessModal() {
+            document.getElementById("processModal").style.display = "block";
+        }
+        function closeProcessModal() {
+            document.getElementById("processModal").style.display = "none";
+        }
+        function openVolunteerForm(){
+            window.location ="https://forms.gle/GcYmonCQUY5nLZCV6"
+        }
+    </script>
+</body>
+</html>
